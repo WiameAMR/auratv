@@ -57,7 +57,7 @@ const plans: PricingPlan[] = [
   }
 ];
 
-export default function Pricing() {
+export function Pricing() {
   // REMPLACEZ CE NUMÉRO PAR VOTRE VRAI NUMÉRO (avec l'indicatif pays, sans espaces ni le signe +)
   // Exemple Maroc : "212612345678" | Exemple France : "33612345678"
   const WHATSAPP_NUMBER = "212679937754";
