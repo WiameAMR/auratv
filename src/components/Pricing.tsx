@@ -1,4 +1,3 @@
-// src/components/Pricing.tsx
 import React from 'react';
 import { Check, ShieldCheck, Zap, MessageCircle } from 'lucide-react';
 
@@ -58,19 +57,15 @@ const plans: PricingPlan[] = [
 ];
 
 export function Pricing() {
-  // REMPLACEZ CE NUMÉRO PAR VOTRE VRAI NUMÉRO (avec l'indicatif pays, sans espaces ni le signe +)
-  // Exemple Maroc : "212612345678" | Exemple France : "33612345678"
   const WHATSAPP_NUMBER = "212679937754";
 
-  // Fonction pour construire l'URL WhatsApp avec message pré-rempli
   const getWhatsAppLink = (plan: PricingPlan) => {
-    const message = `Bonjour AuraTV 👋, je souhaite commander le *${plan.name}* (${plan.duration}) à *${plan.price}*. Pouvez-vous m'indiquer la marche à suivre pour l'activation ?`;
+    const message = `Bonjour AuraTV 👋, je souhaite commander le ${plan.name} (${plan.duration}) à ${plan.price}. Pouvez-vous m'indiquer la marche à suivre pour l'activation ?`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   };
 
   return (
     <section id="pricing" className="py-24 bg-[#090D16] text-white relative">
-      {/* Halo lumineux d'arrière-plan */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00F2FE]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
